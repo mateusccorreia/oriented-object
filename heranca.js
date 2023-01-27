@@ -1,21 +1,36 @@
 class Veiculo {
+    #marca;
+    #modelo;
+    #ano;
 
     constructor (marca, modelo, ano) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.ano = ano;
+        this.#marca = marca;
+        this.#modelo = modelo;
+        this.#ano = ano;
+    }
+
+    get marca() {
+        return this.#marca;
+    }
+
+    set marca(novaMarca) {
+        novaMarca = novaMarca.trim();
+        if (novaMarca === '') {
+            throw 'O nome não pode está vazio'
+        }
+        this.#marca = novaMarca; 
     }
 
     ligar() {
-        console.log('O carro foi ligado')
+        console.log('O veículo foi ligado')
     }
 
     andar() {
-        console.log('O carro está em movimento')
+        console.log('O veículo está em movimento')
     }
 
     frear() {
-        console.log('O carro parou')
+        console.log('O veículo parou')
     }
 }
 
@@ -44,8 +59,10 @@ class Bicicleta extends Veiculo {
     }
 }
 
-const carroUm = new Carro('VW', 'Caminhonete', 2000, 4, true)
-console.log(carroUm.darCarona())
+const carroUm = new Carro('Chevrolet', 'Sedan', '2023', 4, true)
+console.log(carroUm.marca)
+carroUm.marca = 'VM'
+console.log(carroUm.marca)
 
 const bike = new Bicicleta('Caloi', 'Retro', 2019, 'Disco')
-console.log(bike.pedalar())
+console.log(bike.andar())
