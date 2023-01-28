@@ -11,7 +11,7 @@ class Veiculo {
 
     get marca() {
         return this.#marca;
-    }
+    } 
 
     set marca(novaMarca) {
         novaMarca = novaMarca.trim();
@@ -19,6 +19,14 @@ class Veiculo {
             throw 'O nome não pode está vazio'
         }
         this.#marca = novaMarca; 
+    }
+
+    get modelo () {
+        return this.#modelo;
+    }
+
+    set modelo(novoModelo) {
+        this.#modelo = novoModelo
     }
 
     ligar() {
@@ -35,11 +43,13 @@ class Veiculo {
 }
 
 class Carro extends Veiculo {
+    #qtdPortas;
+    #automatico;
 
     constructor (marca, modelo, ano, qtdPortas, automatico) {
         super(marca, modelo, ano);
-        this.qtdPortas = qtdPortas;
-        this.automatico = automatico;  
+        this.#qtdPortas = qtdPortas;
+        this.#automatico = automatico;  
     }
 
     darCarona () {
@@ -60,9 +70,15 @@ class Bicicleta extends Veiculo {
 }
 
 const carroUm = new Carro('Chevrolet', 'Sedan', '2023', 4, true)
-console.log(carroUm.marca)
+// console.log(carroUm.ano)
 carroUm.marca = 'VM'
 console.log(carroUm.marca)
+console.log(carroUm.getMarca())
+// carroUm.modelo = 'Hatch'
+// console.log(carroUm.modelo)
+// carroUm.ano = 2000;
+// console.log(carroUm.ano)
+// console.log(carroUm)
 
-const bike = new Bicicleta('Caloi', 'Retro', 2019, 'Disco')
-console.log(bike.andar())
+// const bike = new Bicicleta('Caloi', 'Retro', 2019, 'Disco')
+// console.log(bike.andar())
