@@ -69,11 +69,10 @@ class Bicicleta extends Veiculo {
     }
 }
 
-const carroUm = new Carro('Chevrolet', 'Sedan', '2023', 4, true)
-// console.log(carroUm.ano)
+const carroUm = new Veiculo('Chevrolet')
+console.log(carroUm.marca)
 carroUm.marca = 'VM'
 console.log(carroUm.marca)
-console.log(carroUm.getMarca())
 // carroUm.modelo = 'Hatch'
 // console.log(carroUm.modelo)
 // carroUm.ano = 2000;
