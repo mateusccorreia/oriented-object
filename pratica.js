@@ -17,9 +17,10 @@
 // console.log(employeeDois)
 
 
-var fruits = ["Apple", "Mango", "Banana"];
+// var fruits = ["Apple", "Mango", "Banana"];
 
-console.log(fruits instanceof Array);
-console.log(fruits instanceof Object);
-console.log(fruits instanceof Number);
-console.log(fruits instanceof String);
+// console.log(fruits instanceof Array);
+// console.log(fruits instanceof Object);
+// console.log(fruits instanceof Number);
+// console.log(fruits instanceof String);
+
