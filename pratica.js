@@ -24,3 +24,11 @@
 // console.log(fruits instanceof Number);
 // console.log(fruits instanceof String);
 
+class Move {
+    static doMove() {
+      return "works"
+    }
+  }
+  console.log(Move.doMove());
+  var t = new Move()
+  t.doMove();

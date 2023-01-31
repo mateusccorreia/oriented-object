@@ -1,0 +1,1 @@
+const treinadorUm = new Treinador('Ash', 'Pallet')
